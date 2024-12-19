@@ -11,11 +11,11 @@
         <h3>Enter your login credentials</h3>
 
         <form action="">
-            <label for="first">
+            <label for="userid">
                 Username:
             </label>
-            <input type="text" id="first" name="first" 
-                placeholder="Enter your Username" required>
+            <input type="text" id="userid" name="userid" 
+                placeholder="Enter your User ID" required>
 
             <label for="password">
                 Password:
@@ -31,7 +31,7 @@
         </form>
         
         <p>Not registered?
-            <a href="/signup" style="text-decoration: none;">
+            <a href="{{url_for('signup')}}" style="text-decoration: none;">
                 Create an account
             </a>
         </p>

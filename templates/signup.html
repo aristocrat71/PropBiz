@@ -6,21 +6,24 @@
 </head>
 
 <body>
+    {% if exists_error %}
+        <p style="color: red;">User already exists</p>
+    {% endif %}
     <div class="main">
         <h1>PropBiz</h1>
         <h3>Create your credentials</h3>
 
-        <form action="">
-            <label for="first">
-                Username:
+        <form method="post">
+            <label for="userid">
+                UserID:
             </label>
-            <input type="text" id="first" name="first" 
-                placeholder="Enter your Username" required>
+            <input type="text" id="userid" name="userid"
+                placeholder="Enter your UserID" required>
 
             <label for="password">
                 Password:
             </label>
-            <input type="password" id="password" name="password" 
+            <input type="password" id="password" name="password"
                 placeholder="Enter your Password" required>
 
             <div class="wrap">
@@ -29,6 +32,12 @@
                 </button>
             </div>
         </form>
+
+        <p>Already registered ?
+            <a href="{{url_for('login')}}" style="text-decoration: none;">
+                Login
+            </a>
+        </p>
     </div>
 </body>
 
