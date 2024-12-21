@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login|PropBiz</title>
+    <title>Signup|PropBiz</title>
     <link rel="stylesheet" href="static/login-style.css">
 </head>
 
 <body>
+    {% if exists_error %}
+        <p style="color: red;">User already exists</p>
+    {% endif %}
     <div class="main">
         <h1>PropBiz</h1>
-        <h3>Enter your login credentials</h3>
+        <h3>Create your credentials</h3>
 
-        <form action="">
+        <form method="post">
             <label for="userid">
-                Username:
+                UserID:
             </label>
-            <input type="text" id="userid" name="userid" 
-                placeholder="Enter your User ID" required>
+            <input type="text" id="userid" name="userid"
+                placeholder="Enter your UserID" required>
 
             <label for="password">
                 Password:
             </label>
-            <input type="password" id="password" name="password" 
+            <input type="password" id="password" name="password"
                 placeholder="Enter your Password" required>
 
             <div class="wrap">
@@ -29,10 +32,10 @@
                 </button>
             </div>
         </form>
-        
-        <p>Not registered?
-            <a href="{{url_for('signup')}}" style="text-decoration: none;">
-                Create an account
+
+        <p>Already registered ?
+            <a href="{{url_for('auth.login')}}" style="text-decoration: none;">
+                Login
             </a>
         </p>
     </div>
