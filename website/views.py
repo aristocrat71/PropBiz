@@ -1,5 +1,5 @@
 from flask import Blueprint
-from flask import render_template
+from flask import render_template, request
 
 views = Blueprint('views', __name__)
 

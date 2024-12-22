@@ -9,16 +9,23 @@
     {% if exists_error %}
         <p style="color: red;">User already exists</p>
     {% endif %}
+
     <div class="main">
         <a href="{{url_for('views.home')}}" style="text-decoration: none;"><h1>PropBiz</h1></a>
         <h3>Create your credentials</h3>
 
         <form method="post">
-            <label for="userid">
-                UserID:
+            <label for="Name">
+                Name:
             </label>
-            <input type="text" id="userid" name="userid"
-                placeholder="Enter your UserID" required>
+            <input type="text" id="name" name="name" 
+                placeholder="Enter your Name (First Name)" required>
+
+            <label for="username">
+                Username:
+            </label>
+            <input type="text" id="username" name="username"
+                placeholder="Enter your username" required>
 
             <label for="password">
                 Password:

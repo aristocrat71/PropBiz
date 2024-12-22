@@ -10,12 +10,12 @@
         <a href="{{url_for('views.home')}}" style="text-decoration: none;"><h1>PropBiz</h1></a>
         <h3>Enter your login credentials</h3>
 
-        <form action="">
-            <label for="userid">
+        <form method="post">
+            <label for="username">
                 Username:
             </label>
-            <input type="text" id="userid" name="userid" 
-                placeholder="Enter your User ID" required>
+            <input type="text" id="username" name="username" 
+                placeholder="Enter your username" required>
 
             <label for="password">
                 Password:
