@@ -4,6 +4,7 @@ from .models import User
 from . import db
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask import redirect, url_for
+from flask_login import login_user, login_required, logout_user, current_user
 
 auth = Blueprint('auth', __name__)
 
@@ -16,7 +17,8 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user:
             if check_password_hash(user.password, password):
-                return redirect(url_for('views.home'))
+                #login_user(user, remember=True)
+                return redirect(url_for('views.userhome'))
             else:
                 return render_template('login.html', password_error=True)
         else:
@@ -40,6 +42,6 @@ def signup():
         )
         db.session.add(new_user)
         db.session.commit()
-        return redirect(url_for('views.home'))
+        return render_template('signup.html', created_user=True)
     
     return render_template('signup.html')

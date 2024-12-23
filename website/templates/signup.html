@@ -10,6 +10,10 @@
         <p style="color: red;">User already exists</p>
     {% endif %}
 
+    {% if created_user %}
+        <p style="color: green;">User created successfully</p>
+    {% endif %}
+
     <div class="main">
         <a href="{{url_for('views.home')}}" style="text-decoration: none;"><h1>PropBiz</h1></a>
         <h3>Create your credentials</h3>
