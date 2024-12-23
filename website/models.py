@@ -2,7 +2,7 @@ from . import db
 from flask_login import UserMixin
 
 class Property(db.Model):
-    property_id = db.Column(db.Integer, primary_key=True)
+    property_id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     owner_id = db.Column(db.Integer, db.ForeignKey('user.id'))
     name = db.Column(db.String(100), nullable=False)
     city = db.Column(db.String(100), nullable=False)
