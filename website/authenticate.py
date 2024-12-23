@@ -17,7 +17,7 @@ def login():
         user = User.query.filter_by(username=username).first()
         if user:
             if check_password_hash(user.password, password):
-                #login_user(user, remember=True)
+                login_user(user, remember=True)
                 return redirect(url_for('views.userhome'))
             else:
                 return render_template('login.html', password_error=True)
