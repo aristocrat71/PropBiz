@@ -1,8 +1,9 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  text-align: initial;
 }
 
 .logo {
@@ -39,4 +40,101 @@
 
 .read-the-docs {
   color: #888;
+}
+
+body, .App {
+  background: #fff;
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.navbar {
+  width: 100vw;
+  left: 0;
+  top: 0;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e6ffe6;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+  margin: 0;
+  z-index: 10;
+}
+.logo {
+  font-size: 1.7rem;
+  font-weight: bold;
+  color: #2e7d32;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+.nav-links a {
+  margin-left: 2rem;
+  text-decoration: none;
+  color: #2e7d32;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #388e3c;
+}
+.landing-main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 70vh;
+  padding: 2rem 5vw;
+  background: #fff;
+  width: 100vw;
+  box-sizing: border-box;
+}
+.landing-content {
+  flex: 1;
+  max-width: 500px;
+}
+.landing-content h1 {
+  font-size: 2.5rem;
+  color: #2e7d32;
+  margin-bottom: 1rem;
+}
+.landing-content p {
+  font-size: 1.2rem;
+  color: #444;
+}
+.landing-image {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.landing-image img {
+  max-width: 350px;
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.footer {
+  background: #e6ffe6;
+  color: #2e7d32;
+  text-align: center;
+  padding: 1rem 0 0.5rem 0;
+  font-size: 1rem;
+  border-top: 1px solid #d0f5d8;
+  margin-top: 2rem;
+  width: 100vw;
+}
+@media (max-width: 900px) {
+  .landing-main {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 2vw;
+  }
+  .landing-image {
+    justify-content: center;
+    margin-top: 2rem;
+  }
 }
